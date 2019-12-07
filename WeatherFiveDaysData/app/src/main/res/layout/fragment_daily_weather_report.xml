@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.DailyWeatherReportFirstFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:text="Tue 2019 Oct"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle"
+            android:text="Hourly Forecast Report"/>
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height= "1dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/white" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hourly_weather_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="5dp"
+            />
+
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/daily_bar_char_day"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="200dp"/>
+
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/daily_report_linechart"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

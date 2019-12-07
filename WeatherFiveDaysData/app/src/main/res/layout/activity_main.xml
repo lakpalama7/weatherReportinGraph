@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_style"
+   >
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="16dp"
+       >
+       <TextView
+           android:id="@+id/city_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           tools:text="Chittoor, IN"
+           android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+           android:textAllCaps="true"
+           android:textColor="@android:color/black"
+           android:textStyle="bold"
+           ></TextView>
+       <TextView
+           android:id="@+id/updated_datetime"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           tools:text="Sun 18 Nov 12:34 PM"
+           android:textAppearance="@style/TextAppearance.AppCompat.Large"
+           android:textColor="@android:color/black"
+           android:textStyle="bold"
+           android:layout_below="@+id/city_name"/>
+
+       <ImageView
+           android:id="@+id/setting"
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:src="@drawable/setting"
+           android:layout_alignParentRight="true"
+           android:clickable="true"
+           />
+   </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    >
+    <ImageView
+        android:id="@+id/current_tmp_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/cloudy"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/current_tmp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="27.23 C"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            />
+        <TextView
+            android:id="@+id/current_minmax_tmp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="21.22 C / 27.22 C"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle"
+            />
+        <TextView
+            android:id="@+id/current_tmp_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            tools:text="Cloudy"/>
+
+    </LinearLayout>
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout style="@style/footerLinearyLayoutStyle">
+
+                <ImageView
+                    style="@style/imageViewStyle"
+                    android:src="@mipmap/sun" />
+
+                <TextView
+                    style="@style/staticTextViewStyle"
+                    android:text="Sunrise" />
+
+                <TextView
+                    android:id="@+id/sunrise_time"
+                    style="@style/dynamicTextViewStyle"
+
+                    tools:text="05:00 AM" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/footerLinearyLayoutStyle">
+
+                <ImageView
+                    style="@style/imageViewStyle"
+                    android:src="@mipmap/sunset" />
+
+                <TextView
+                    style="@style/staticTextViewStyle"
+                    android:text="Sunset" />
+
+                <TextView
+                    android:id="@+id/sunset_time"
+                    style="@style/dynamicTextViewStyle"
+                    tools:text="05:00 PM" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/footerLinearyLayoutStyle">
+
+                <ImageView
+                    style="@style/imageViewStyle"
+                    android:src="@mipmap/windy" />
+
+                <TextView
+                    style="@style/staticTextViewStyle"
+                    android:text="Wind" />
+
+                <TextView
+                    android:id="@+id/windspeed"
+                    style="@style/dynamicTextViewStyle"
+
+                    tools:text="20.20" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout style="@style/footerLinearyLayoutStyle">
+
+                <ImageView
+                    style="@style/imageViewStyle"
+                    android:src="@mipmap/pressurewind" />
+
+                <TextView
+                    style="@style/staticTextViewStyle"
+
+                    android:text="Pressure" />
+
+                <TextView
+                    android:id="@+id/windpressure"
+                    style="@style/dynamicTextViewStyle"
+                    tools:text="200 rpm" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/footerLinearyLayoutStyle">
+
+                <ImageView
+                    style="@style/imageViewStyle"
+                    android:src="@mipmap/humiditywind" />
+
+                <TextView
+                    style="@style/staticTextViewStyle"
+                    android:text="Humidity" />
+
+                <TextView
+                    android:id="@+id/humidity"
+                    style="@style/dynamicTextViewStyle"
+
+                    tools:text="100 psi" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/footerLinearyLayoutStyle">
+
+                <ImageView
+                    style="@style/imageViewStyle"
+                    android:src="@mipmap/coordinate" />
+
+                <TextView
+                    style="@style/staticTextViewStyle"
+                    android:text="Coordinate" />
+
+                <TextView
+                    android:id="@+id/coordinate"
+                    style="@style/dynamicTextViewStyle"
+                    tools:text="10.30, 30.30" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="5dp" />
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+        android:text="Hourly Forecast"/>
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height= "1dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hourly_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/daily_bar_char_day"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"/>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height= "1dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+        android:text="Daily Forecast"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/daily_report_linechart"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:layout_height="200dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/daily_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        app:reverseLayout="true"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height= "1dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white" />
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"/>
+</LinearLayout>
+
+
+
+</ScrollView>

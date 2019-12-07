@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="70dp"
+    android:layout_height="90dp">
+    <TextView
+        android:id="@+id/hour_daily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        tools:text="10 AM"/>
+    <ImageView
+        android:id="@+id/img_daily"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/sunrise"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:id="@+id/temp_daily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:text="21"
+        android:textStyle="bold"/>
+</LinearLayout>
